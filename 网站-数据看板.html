@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据看板</title>
+    <!-- 需要使用5.1.3的版本，要不然会出现一些样式无法与官方样例程序不一致的小问题 -->
+    <link rel="stylesheet" href="./libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <script src="./libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="./libs/chart/2.9.4/chart.min.js"></script>
+    <script src="./libs/feather-icons/4.28.0/feather.min.js"></script>
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        body {
+            font-size: .875rem;
+        }
+
+        .feather {
+            width: 16px;
+            height: 16px;
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 上方导航栏 -->
+    <style>
+        /*
+        * 导航栏
+        */
+        .navbar-brand {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            font-size: 1rem;
+            background-color: rgba(0, 0, 0, .25);
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+        }
+
+        .navbar .navbar-toggler {
+            top: .25rem;
+            right: 1rem;
+        }
+
+        .navbar .form-control {
+            padding: .75rem 1rem;
+            border-width: 0;
+            border-radius: 0;
+        }
+
+        .form-control-dark {
+            color: #fff;
+            background-color: rgba(255, 255, 255, .1);
+            border-color: rgba(255, 255, 255, .1);
+        }
+
+        .form-control-dark:focus {
+            border-color: transparent;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+        }
+    </style>
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">公司名称</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <input class="form-control form-control-dark w-100" placeholder="搜索">
+        <div class="navbar-nav">
+            <div class="nav-item text-nowrap">
+                <a class="nav-link px-3" href="#">按钮</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 左侧导航栏 -->
+            <style>
+                /* 侧边栏 */
+                .sidebar {
+                    position: fixed;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 100;
+                    padding: 48px 0 0;
+                    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+                }
+
+                @media (max-width: 767.98px) {
+                    .sidebar {
+                        top: 5rem;
+                    }
+                }
+
+                .sidebar-sticky {
+                    position: relative;
+                    top: 0;
+                    height: calc(100vh - 48px);
+                    padding-top: .5rem;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    /* 当视口短于内容时可滚动内容。 */
+                }
+
+                .sidebar .nav-link {
+                    font-weight: 500;
+                    color: #333;
+                }
+
+                .sidebar .nav-link .feather {
+                    margin-right: 4px;
+                    color: #727272;
+                }
+
+                .sidebar .nav-link.active {
+                    color: #2470dc;
+                }
+
+                .sidebar .nav-link:hover .feather,
+                .sidebar .nav-link.active .feather {
+                    color: inherit;
+                }
+
+                .sidebar-heading {
+                    font-size: .75rem;
+                    text-transform: uppercase;
+                }
+            </style>
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <span data-feather="home"></span>
+                                仪表盘
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file"></span>
+                                订单
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="shopping-cart"></span>
+                                产品
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="users"></span>
+                                客户
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="bar-chart-2"></span>
+                                报告
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="layers"></span>
+                                集成
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>已保存的报告</span>
+                        <a class="link-secondary" href="#">
+                            <span data-feather="plus-circle"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file-text"></span>
+                                当前月份
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file-text"></span>
+                                上一季度
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file-text"></span>
+                                社交参与度
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file-text"></span>
+                                年末促销
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+
+            <!-- 右侧内容 -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <!-- 图表的工具栏 -->
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">仪表盘</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group me-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">分享</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">导出</button>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                            <span data-feather="calendar"></span>
+                            本周
+                        </button>
+                    </div>
+                </div>
+                <!-- 图表的画板 -->
+                <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                <script>
+                    // 图表
+                    var ctx = document.getElementById('myChart')
+                    // eslint-disable-next-line no-unused-vars
+                    var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: [
+                                '周日',
+                                '周一',
+                                '周二',
+                                '周三',
+                                '周四',
+                                '周五',
+                                '周六'
+                            ],
+                            datasets: [{
+                                data: [
+                                    15339,
+                                    21345,
+                                    18483,
+                                    24003,
+                                    23489,
+                                    24092,
+                                    12034
+                                ],
+                                lineTension: 0,
+                                backgroundColor: 'transparent',
+                                borderColor: '#007bff',
+                                borderWidth: 4,
+                                pointBackgroundColor: '#007bff'
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: false
+                                    }
+                                }]
+                            },
+                            legend: {
+                                display: false
+                            }
+                        }
+                    })
+                </script>
+
+                <h2>详情数据</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">标题</th>
+                                <th scope="col">标题</th>
+                                <th scope="col">标题</th>
+                                <th scope="col">标题</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1,001</td>
+                                <td>随机</td>
+                                <td>数据</td>
+                                <td>占位符</td>
+                                <td>文本</td>
+                            </tr>
+                            <tr>
+                                <td>1,002</td>
+                                <td>占位符</td>
+                                <td>不相关的</td>
+                                <td>视觉</td>
+                                <td>布局</td>
+                            </tr>
+                            <tr>
+                                <td>1,003</td>
+                                <td>数据</td>
+                                <td>丰富的</td>
+                                <td>仪表板</td>
+                                <td>表格</td>
+                            </tr>
+                            <tr>
+                                <td>1,003</td>
+                                <td>信息</td>
+                                <td>占位符</td>
+                                <td>说明性的</td>
+                                <td>数据</td>
+                            </tr>
+                            <tr>
+                                <td>1,004</td>
+                                <td>文本</td>
+                                <td>随机</td>
+                                <td>布局</td>
+                                <td>仪表板</td>
+                            </tr>
+                            <tr>
+                                <td>1,005</td>
+                                <td>仪表板</td>
+                                <td>不相关的</td>
+                                <td>文本</td>
+                                <td>占位符</td>
+                            </tr>
+                            <tr>
+                                <td>1,006</td>
+                                <td>仪表板</td>
+                                <td>说明性的</td>
+                                <td>丰富的</td>
+                                <td>数据</td>
+                            </tr>
+                            <tr>
+                                <td>1,007</td>
+                                <td>占位符</td>
+                                <td>表格</td>
+                                <td>信息</td>
+                                <td>不相关的</td>
+                            </tr>
+                            <tr>
+                                <td>1,008</td>
+                                <td>随机</td>
+                                <td>数据</td>
+                                <td>占位符</td>
+                                <td>文本</td>
+                            </tr>
+                            <tr>
+                                <td>1,009</td>
+                                <td>占位符</td>
+                                <td>不相关的</td>
+                                <td>视觉</td>
+                                <td>布局</td>
+                            </tr>
+                            <tr>
+                                <td>1,010</td>
+                                <td>数据</td>
+                                <td>丰富的</td>
+                                <td>仪表板</td>
+                                <td>表格</td>
+                            </tr>
+                            <tr>
+                                <td>1,011</td>
+                                <td>信息</td>
+                                <td>占位符</td>
+                                <td>说明性的</td>
+                                <td>数据</td>
+                            </tr>
+                            <tr>
+                                <td>1,012</td>
+                                <td>文本</td>
+                                <td>占位符</td>
+                                <td>布局</td>
+                                <td>仪表板</td>
+                            </tr>
+                            <tr>
+                                <td>1,013</td>
+                                <td>仪表板</td>
+                                <td>不相关的</td>
+                                <td>文本</td>
+                                <td>视觉</td>
+                            </tr>
+                            <tr>
+                                <td>1,014</td>
+                                <td>仪表板</td>
+                                <td>说明性的</td>
+                                <td>丰富的</td>
+                                <td>数据</td>
+                            </tr>
+                            <tr>
+                                <td>1,015</td>
+                                <td>随机</td>
+                                <td>表格</td>
+                                <td>信息</td>
+                                <td>文本</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </main>
+        </div>
+    </div>
+
+
+    <script>
+        // 构造图标
+        feather.replace({ 'aria-hidden': 'true' })
+    </script>
+</body>
+
+</html>

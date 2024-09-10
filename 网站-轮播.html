@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./libs/bootstrap/5.3.0/css/bootstrap.css">
+    <script src="./libs/bootstrap/5.3.0/js/bootstrap.bundle.js"></script>
+
+    <style>
+        body {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            color: #5a5a5a;
+        }
+
+
+        @media (min-width: 40em) {
+            .carousel-caption p {
+                margin-bottom: 1.25rem;
+                font-size: 1.25rem;
+                line-height: 1.4;
+            }
+
+            .featurette-heading {
+                font-size: 50px;
+            }
+        }
+
+        @media (min-width: 62em) {
+            .featurette-heading {
+                margin-top: 7rem;
+            }
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">网站名</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">页面1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">页面2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">页面3</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="搜索">
+                        <button class="btn btn-outline-success" type="submit">搜</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <style>
+            /* Carousel基类 */
+            .carousel {
+                margin-bottom: 4rem;
+            }
+
+            /* 由于定位了图像，我们需要帮助标题 */
+            .carousel-caption {
+                bottom: 3rem;
+                z-index: 10;
+            }
+
+            /* 根据img元素的位置声明高度 */
+            .carousel-item {
+                height: 32rem;
+            }
+
+            .carousel-item>img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-width: 100%;
+                height: 32rem;
+            }
+        </style>
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%" fill="#777" />
+                    </svg>
+
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1>轮播图1-标题（居左）</h1>
+                            <p>轮播图1-内容</p>
+                            <p><a class="btn btn-lg btn-primary" href="#">轮播图1-按钮</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%" fill="#777" />
+                    </svg>
+
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>轮播图2-标题（居中）</h1>
+                            <p>轮播图2-内容</p>
+                            <p><a class="btn btn-lg btn-primary" href="#">轮播图2-按钮</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%" fill="#777" />
+                    </svg>
+
+                    <div class="container">
+                        <div class="carousel-caption text-end">
+                            <h1>轮播图3-标题（居右）</h1>
+                            <p>轮播图3-内容</p>
+                            <p><a class="btn btn-lg btn-primary" href="#">轮播图3-按钮</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">上一页</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">下一页</span>
+            </button>
+        </div>
+
+
+        <!-- 营销信息和功能 -->
+        <!-- 将页面的其余部分包装在另一个容器中，以使所有内容居中。 -->
+        <style>
+            .marketing .col-lg-4 {
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+
+            .marketing h2 {
+                font-weight: 400;
+            }
+
+            .marketing .col-lg-4 p {
+                margin-right: .75rem;
+                margin-left: .75rem;
+            }
+        </style>
+        <div class="container marketing">
+
+            <!-- 传送带下方有三列文字 -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>列1-图片</title>
+                        <rect width="100%" height="100%" fill="#777" />
+                        <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+                    </svg>
+
+                    <h2>列1-标题</h2>
+                    <p>列1-内容</p>
+                    <p><a class="btn btn-secondary" href="#">列1-按钮 &raquo;</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>列2-图片</title>
+                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+                    </svg>
+
+                    <h2>列2-标题</h2>
+                    <p>列2-内容</p>
+                    <p><a class="btn btn-secondary" href="#">列2-按钮 &raquo;</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>列2-图片</title>
+                        <rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+                    </svg>
+
+                    <h2>列2-标题</h2>
+                    <p>列2-内容</p>
+                    <p><a class="btn btn-secondary" href="#">列2-按钮 &raquo;</a></p>
+                </div>
+            </div>
+
+
+            <!-- 电影短片 -->
+            <style>
+                .featurette-divider {
+                    margin: 5rem 0;
+                }
+
+                .featurette-heading {
+                    font-weight: 300;
+                    line-height: 1;
+                    letter-spacing: -.05rem;
+                }
+            </style>
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">第一个特征标题。<span class="text-muted">它会让你大吃一惊。</span></h2>
+                    <p class="lead">这里有一些很棒的占位符内容。想象一下这里有一些令人兴奋的散文。</p>
+                </div>
+                <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee" />
+                        <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                    </svg>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">是啊，就是那么好。<span class="text-muted">你自己看吧。</span></h2>
+                    <p class="lead">另一个电影短片吗?当然可以。这里有更多的占位符内容，让你了解这个布局如何处理一些实际的现实世界的内容。</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee" />
+                        <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                    </svg>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">最后，这个。<span class="text-muted">将军。</span></h2>
+                    <p class="lead">是的，这是最后一块代表性占位符内容。再说一遍，我并不是真的想让你们去读，我只是想让你们更好地了解一些实际内容会是什么样子。你的内容。</p>
+                </div>
+                <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee" />
+                        <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                    </svg>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+        </div>
+
+
+        <!-- 脚 -->
+        <footer class="container">
+            <p class="float-end"><a href="#">回到顶部</a></p>
+            <p>
+                &copy; 2017–2021 公司, &middot;
+                <a href="#">隐私</a> &middot;
+                <a href="#">条款</a>
+            </p>
+        </footer>
+    </main>
+
+
+</body>
+
+</html>

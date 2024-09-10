@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网格</title>
+    <link rel="stylesheet" href="./libs/bootstrap/5.3.0/css/bootstrap.css">
+    <script src="./libs/bootstrap/5.3.0/js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+    <style>
+        .themed-grid-col {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            background-color: rgba(86, 61, 124, .15);
+            border: 1px solid rgba(86, 61, 124, .2);
+        }
+    </style>
+    <h2 class="mt-4">网格的6种写法</h2>
+    <h3>默认网格，只是分列，不会伸缩</h3>
+    <div class="row mb-3">
+        <div class="col-4 themed-grid-col">.col-4</div>
+        <div class="col-4 themed-grid-col">.col-4</div>
+        <div class="col-4 themed-grid-col">.col-4</div>
+    </div>
+    <h3>列-小型</h3>
+    <div class="row mb-3">
+        <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
+        <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
+        <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
+    </div>
+    <h3>列-中型</h3>
+    <div class="row mb-3">
+        <div class="col-md-4 themed-grid-col">.col-md-4</div>
+        <div class="col-md-4 themed-grid-col">.col-md-4</div>
+        <div class="col-md-4 themed-grid-col">.col-md-4</div>
+    </div>
+    <h3>列-大型</h3>
+    <div class="row mb-3">
+        <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
+        <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
+        <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
+    </div>
+    <h3>列-超大型</h3>
+    <div class="row mb-3">
+        <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
+        <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
+        <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
+    </div>
+    <h3>列-超超大型</h3>
+    <div class="row mb-3">
+        <div class="col-xxl-4 themed-grid-col">.col-xxl-4</div>
+        <div class="col-xxl-4 themed-grid-col">.col-xxl-4</div>
+        <div class="col-xxl-4 themed-grid-col">.col-xxl-4</div>
+    </div>
+
+
+    <h2 class="mt-4">3个等宽的列</h2>
+    <div class="row mb-3">
+        <div class="col-md-4 themed-grid-col">.col-md-4</div>
+        <div class="col-md-4 themed-grid-col">.col-md-4</div>
+        <div class="col-md-4 themed-grid-col">.col-md-4</div>
+    </div>
+
+    <h2 class="mt-4">3个等宽的列，在行的位置定义列</h2>
+    <div class="row row-cols-md-3 mb-3">
+        <div class="col themed-grid-col">.row-cols-md-3</div>
+        <div class="col themed-grid-col">.row-cols-md-3</div>
+        <div class="col themed-grid-col">.row-cols-md-3</div>
+    </div>
+
+    <h2 class="mt-4">3个不等的列</h2>
+    <div class="row mb-3">
+        <div class="col-md-3 themed-grid-col">.col-md-3</div>
+        <div class="col-md-6 themed-grid-col">.col-md-6</div>
+        <div class="col-md-3 themed-grid-col">.col-md-3</div>
+    </div>
+
+    <h2 class="mt-4">2个列</h2>
+    <div class="row mb-3">
+        <div class="col-md-8 themed-grid-col">.col-md-8</div>
+        <div class="col-md-4 themed-grid-col">.col-md-4</div>
+    </div>
+
+    <h2 class="mt-4">1个列，全宽</h2>
+    <p class="text-warning">
+        不设置网格，默认就是全宽的
+    </p>
+
+
+    <h2 class="mt-4">设置2个列，其中1个列中包含2个列</h2>
+    <div class="row mb-3">
+        <div class="col-md-8 themed-grid-col">
+            <div class="pb-3">
+                .col-md-8
+            </div>
+            <div class="row">
+                <div class="col-md-6 themed-grid-col">.col-md-6</div>
+                <div class="col-md-6 themed-grid-col">.col-md-6</div>
+            </div>
+        </div>
+        <div class="col-md-4 themed-grid-col">.col-md-4</div>
+    </div>
+
+
+    <h2 class="mt-4">综合应用1：移动端，桌面端</h2>
+    <h2>可以为列设置多个宽度，如下所示，这些宽度会在不同的设备中生效</h2>
+    <h2>如果你希望md，lg，xl，xxl是同义词，那么你只需要设置md就行了</h2>
+    <div class="row mb-3">
+        <div class="col-md-8 themed-grid-col">.col-md-8</div>
+        <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4</div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4</div>
+        <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4</div>
+        <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4</div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-6 themed-grid-col">.col-6</div>
+        <div class="col-6 themed-grid-col">.col-6</div>
+    </div>
+
+    <h2 class="mt-4">综合应用2：移动，平板，桌面</h2>
+    <div class="row mb-3">
+        <div class="col-sm-6 col-lg-8 themed-grid-col">.col-sm-6 .col-lg-8</div>
+        <div class="col-6 col-lg-4 themed-grid-col">.col-6 .col-lg-4</div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-6 col-sm-4 themed-grid-col">.col-6 .col-sm-4</div>
+        <div class="col-6 col-sm-4 themed-grid-col">.col-6 .col-sm-4</div>
+        <div class="col-6 col-sm-4 themed-grid-col">.col-6 .col-sm-4</div>
+    </div>
+
+    <h2 class="mt-4">水平的外间距，垂直外间距</h2>
+    <h3>网格元素的水平外间距</h3>
+    <div class="row row-cols-1 row-cols-md-3 gx-4">
+        <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
+    </div>
+    <h3>网格元素的垂直外间距</h3>
+    <div class="row row-cols-1 row-cols-md-3 gy-4">
+        <div class="col themed-grid-col"><code>.col</code> with <code>.gy-4</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.gy-4</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.gy-4</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.gy-4</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.gy-4</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.gy-4</code> gutters</div>
+    </div>
+    <h3>同时调整</h3>
+    <div class="row row-cols-1 row-cols-md-3 g-3">
+        <div class="col themed-grid-col"><code>.col</code> with <code>.g-3</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.g-3</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.g-3</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.g-3</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.g-3</code> gutters</div>
+        <div class="col themed-grid-col"><code>.col</code> with <code>.g-3</code> gutters</div>
+    </div>
+
+
+    <style>
+        .themed-container {
+            padding: .75rem;
+            margin-bottom: 1.5rem;
+            background-color: rgba(0, 123, 255, .15);
+            border: 1px solid rgba(0, 123, 255, .2);
+        }
+    </style>
+    <div class="container" id="containers">
+        <h2 class="mt-4">容器</h2>
+    </div>
+
+    <div class="container themed-container">默认容器</div>
+    <div class="container-sm themed-container">小型容器</div>
+    <div class="container-md themed-container">中型容器</div>
+    <div class="container-lg themed-container">大型容器</div>
+    <div class="container-xl themed-container">超大型容器</div>
+    <div class="container-xxl themed-container">超超大型容器</div>
+    <div class="container-fluid themed-container">流体容器</div>
+
+</body>
+
+</html>

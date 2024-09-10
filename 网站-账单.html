@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./libs/bootstrap/5.3.0/css/bootstrap.css">
+    <script src="./libs/bootstrap/5.3.0/js/bootstrap.bundle.js"></script>
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <style>
+        .container {
+            max-width: 960px;
+        }
+    </style>
+    <div class="container">
+        <main>
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="./img/bootstrap-logo.svg" alt="" width="72" height="57">
+                <h2>账单</h2>
+                <p class="lead">下面是一个使用Bootstrap构建，编写的示例表单程序。</p>
+                <p class="lead">如果必填的表单，没有填写值，则会触发验证提示程序。</p>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-md-5 col-lg-4 order-md-last">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="text-primary">购物车</span>
+                        <span class="badge bg-primary rounded-pill">4件</span>
+                    </h4>
+                    <ul class="list-group mb-3">
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">产品1-标题</h6>
+                                <small class="text-muted">产品1-内容</small>
+                            </div>
+                            <span class="text-muted">1元</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">产品2-标题</h6>
+                                <small class="text-muted">产品2-内容</small>
+                            </div>
+                            <span class="text-muted">2元</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">产品3-标题</h6>
+                                <small class="text-muted">产品3-内容</small>
+                            </div>
+                            <span class="text-muted">3元</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between bg-light">
+                            <div class="text-success">
+                                <h6 class="my-0">产品4-标题</h6>
+                                <small>产品4-内容</small>
+                            </div>
+                            <span class="text-success">−4元</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>总计</span>
+                            <strong>2元</strong>
+                        </li>
+                    </ul>
+
+                    <form class="card p-2">
+                        <div class="input-group">
+                            <input class="form-control" placeholder="促销代码">
+                            <button type="submit" class="btn btn-secondary">兑换</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-7 col-lg-8">
+                    <h4 class="mb-3">账单地址</h4>
+                    <form class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label">名</label>
+                                <input class="form-control" id="firstName" placeholder="冠宇" required>
+                                <div class="invalid-feedback">请输入有效的名。</div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label">姓</label>
+                                <input class="form-control" id="lastName" placeholder="任" required>
+                                <div class="invalid-feedback">请输入有效的姓。</div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="username" class="form-label">用户名</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">@</span>
+                                    <input class="form-control" id="username" placeholder="q651231292" required>
+                                    <div class="invalid-feedback">请输入您的用户名。</div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="email" class="form-label">电子邮件 <span class="text-muted">(可选)</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="651231292@qq.com">
+                                <div class="invalid-feedback">请输入有效的电子邮箱信息</div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="address" class="form-label">地址</label>
+                                <input class="form-control" id="address" placeholder="黑龙江省-大庆市-龙凤区-博学大街" required>
+                                <div class="invalid-feedback">请输入您的送货地址。</div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="address2" class="form-label">地址 2 <span class="text-muted">(可选)</span></label>
+                                <input class="form-control" id="address2" placeholder="联想科技城A1号楼1单元613室">
+                            </div>
+
+                            <div class="col-md-5">
+                                <label for="country" class="form-label">国</label>
+                                <select class="form-select" id="country" required>
+                                    <option value="">请选择</option>
+                                    <option>中国</option>
+                                </select>
+                                <div class="invalid-feedback">请选择一个有效的国家。</div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="state" class="form-label">省</label>
+                                <select class="form-select" id="state" required>
+                                    <option value="">请选择</option>
+                                    <option>黑龙江</option>
+                                </select>
+                                <div class="invalid-feedback">请输入一个有效的省。</div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="zip" class="form-label">邮编</label>
+                                <input class="form-control" id="zip" placeholder="163000" required>
+                                <div class="invalid-feedback">邮政编码必填。</div>
+                            </div>
+                        </div>
+
+
+                        <hr class="my-4">
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="same-address">
+                            <label class="form-check-label" for="same-address">收获地址与此账单填写的地址相同</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="save-info">
+                            <label class="form-check-label" for="save-info">保存此信息</label>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <h4 class="mb-3">支付方式</h4>
+
+                        <div class="my-3">
+                            <div class="form-check">
+                                <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                                <label class="form-check-label" for="credit">支付宝</label>
+                            </div>
+                            <div class="form-check">
+                                <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="debit">微信</label>
+                            </div>
+                            <div class="form-check">
+                                <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                                <label class="form-check-label" for="paypal">数字人民币</label>
+                            </div>
+                        </div>
+
+                        <div class="row gy-3">
+                            <div class="col-md-6">
+                                <label for="cc-name" class="form-label">持卡人姓名</label>
+                                <input class="form-control" id="cc-name" placeholder="任冠宇" required>
+                                <small class="text-muted">与卡上姓名一致</small>
+                                <div class="invalid-feedback">持卡人姓名不能为空。</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="cc-number" class="form-label">信用卡号码</label>
+                                <input class="form-control" id="cc-number" placeholder="1234567890" required>
+                                <div class="invalid-feedback">信用卡号码不能为空。</div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="cc-expiration" class="form-label">有效期</label>
+                                <input class="form-control" id="cc-expiration" placeholder="2023-03-24" required>
+                                <div class="invalid-feedback">有效期不能为空。</div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label for="cc-cvv" class="form-label">安全码</label>
+                                <input class="form-control" id="cc-cvv" placeholder="123456" required>
+                                <div class="invalid-feedback">安全码不能为空。</div>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <button class="w-100 btn btn-primary btn-lg" type="submit">结账</button>
+
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; 2017–2021 公司名称</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">隐私政策</a></li>
+                <li class="list-inline-item"><a href="#">条款</a></li>
+                <li class="list-inline-item"><a href="#">支持</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <script>
+        // 获取我们想要应用自定义Bootstrap验证样式的所有表单
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // 循环遍历它们并阻止提交
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    </script>
+
+</body>
+
+</html>

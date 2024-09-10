@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客网站</title>
+    <link rel="stylesheet" href="./libs/bootstrap/5.3.0/css/bootstrap.css">
+    <script src="./libs/bootstrap/5.3.0/js/bootstrap.bundle.js"></script>
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        .blog-header {
+            line-height: 1;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .blog-header-logo {
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif
+                /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+            ;
+            font-size: 2.25rem;
+        }
+
+        .blog-header-logo:hover {
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif
+                /*rtl:Amiri, Georgia, "Times New Roman", serif*/
+            ;
+        }
+
+        .display-4 {
+            font-size: 2.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .display-4 {
+                font-size: 3rem;
+            }
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav-scroller .nav-link {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            font-size: .875rem;
+        }
+
+        .card-img-right {
+            height: 100%;
+            border-radius: 0 3px 3px 0;
+        }
+
+        .flex-auto {
+            flex: 0 0 auto;
+        }
+
+        .h-250 {
+            height: 250px;
+        }
+
+        @media (min-width: 768px) {
+            .h-md-250 {
+                height: 250px;
+            }
+        }
+    </style>
+    <div class="container">
+        <header class="blog-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4 pt-1">
+                    <a class="link-secondary">订阅</a>
+                </div>
+                <div class="col-4 text-center">
+                    <a class="blog-header-logo text-dark">标题</a>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <a class="link-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" viewBox="0 0 24 24">
+                            <title>Search</title>
+                            <circle cx="10.5" cy="10.5" r="7.5" />
+                            <path d="M21 21l-5.2-5.2" />
+                        </svg>
+                    </a>
+                    <a class="btn btn-sm btn-outline-secondary">按钮</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="nav-scroller py-1 mb-2">
+            <nav class="nav d-flex justify-content-between">
+                <a class="p-2 link-secondary" href="#">页面1</a>
+                <a class="p-2 link-secondary" href="#">页面2</a>
+                <a class="p-2 link-secondary" href="#">页面3</a>
+                <a class="p-2 link-secondary" href="#">页面4</a>
+                <a class="p-2 link-secondary" href="#">页面5</a>
+                <a class="p-2 link-secondary" href="#">页面6</a>
+                <a class="p-2 link-secondary" href="#">页面7</a>
+                <a class="p-2 link-secondary" href="#">页面8</a>
+                <a class="p-2 link-secondary" href="#">页面9</a>
+                <a class="p-2 link-secondary" href="#">页面10</a>
+                <a class="p-2 link-secondary" href="#">页面11</a>
+                <a class="p-2 link-secondary" href="#">页面12</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 fst-italic">标题</h1>
+                <p class="lead my-3">内容</p>
+                <p class="lead mb-0"><a class="text-white fw-bold">链接</a></p>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">文本</strong>
+                        <h3 class="mb-0">标题</h3>
+                        <div class="mb-1 text-muted">2023-03-23</div>
+                        <p class="card-text mb-auto">内容</p>
+                        <a class="stretched-link">链接</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#55595c" />
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">图片文本</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">文本</strong>
+                        <h3 class="mb-0">标题</h3>
+                        <div class="mb-1 text-muted">2023-03-23</div>
+                        <p class="mb-auto">内容</p>
+                        <a class="stretched-link">链接</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#55595c" />
+                            <text x="50%" y="50%" fill="#eceeef" dy=".3em">图片文本</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .blog-post {
+                margin-bottom: 4rem;
+            }
+
+            .blog-post-title {
+                margin-bottom: .25rem;
+                font-size: 2.5rem;
+            }
+
+            .blog-post-meta {
+                margin-bottom: 1.25rem;
+                color: #727272;
+            }
+        </style>
+        <div class="row g-5">
+            <div class="col-md-8">
+                <h3 class="pb-4 mb-4 fst-italic border-bottom">文本</h3>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title">示例博客文章</h2>
+                    <p class="blog-post-meta">2020年12月23日 作者：<a href="#">任冠宇</a></p>
+                    <p>这篇博文展示了Bootstrap支持的几种不同类型的内容。基本排版、列表、表格、图像、代码等都如预期支持。</p>
+                    <hr>
+                    <p>这是一些额外的段落占位符内容。它的编写是为了填充可用的空间，并显示较长的文本片段如何影响周围的内容。我们将经常重复它，以保持演示的流畅，所以请注意这个完全相同的文本字符串。</p>
+
+                    <h2>块引用</h2>
+                    <p>这是一个块引用的例子</p>
+                    <blockquote class="blockquote">
+                        <p>引用的文本放在这里。</p>
+                    </blockquote>
+                    <p>这是一些额外的段落占位符内容。它的编写是为了填充可用的空间，并显示较长的文本片段如何影响周围的内容。我们将经常重复它，以保持演示的流畅，所以请注意这个完全相同的文本字符串。</p>
+
+                    <h3>列表</h3>
+
+                    <p>无序列表</p>
+                    <ul>
+                        <li>元素1</li>
+                        <li>元素2</li>
+                        <li>元素3</li>
+                    </ul>
+
+                    <p>有序列表</p>
+                    <ol>
+                        <li>元素1</li>
+                        <li>元素2</li>
+                        <li>元素3</li>
+                    </ol>
+                    <p>自定义列表</p>
+                    <dl>
+                        <dt>元素1-标题</dt>
+                        <dd>元素1-内容</dd>
+                        <dt>元素2-标题</dt>
+                        <dd>元素2-内容</dd>
+                        <dt>元素3-标题</dt>
+                        <dd>元素3-内容</dd>
+                    </dl>
+
+                    <h2>行内元素</h2>
+                    <p>HTML定义了一长串可用的行内标签，完整的列表可以在Mozilla Developer Network上找到。</p>
+                    <ul>
+                        <li><strong>加粗文本</strong></li>
+                        <li><em>倾斜文本</em></li>
+                        <li><abbr>虚下划线文本</abbr></li>
+                        <li><cite>引用文本</cite></li>
+                        <li><del>删除文本</del></li>
+                        <li>文字<sup>上标</sup></li>
+                        <li>文字<sub>下标</sub> </li>
+                    </ul>
+                    <p>这些元素中的大多数都由浏览器设置样式，我们只做了很少的修改。</p>
+
+                    <h2>标题</h2>
+                    <p>这是一些额外的段落占位符内容。它的编写是为了填充可用的空间，并显示较长的文本片段如何影响周围的内容。我们将经常重复它，以保持演示的流畅，所以请注意这个完全相同的文本字符串。</p>
+                    <h3>子标题</h3>
+                    <p>这是一些额外的段落占位符内容。它的编写是为了填充可用的空间，并显示较长的文本片段如何影响周围的内容。我们将经常重复它，以保持演示的流畅，所以请注意这个完全相同的文本字符串。</p>
+                    <pre><code>示例代码块</code></pre>
+                    <p>这是一些额外的段落占位符内容。它的编写是为了填充可用的空间，并显示较长的文本片段如何影响周围的内容。我们将经常重复它，以保持演示的流畅，所以请注意这个完全相同的文本字符串。</p>
+                </article>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title">另一篇博客文章</h2>
+                    <p class="blog-post-meta">2020年12月23日 作者：<a href="#">任冠宇</a></p>
+
+                    <p>这是一些额外的段落占位符内容。它的编写是为了填充可用的空间，并显示较长的文本片段如何影响周围的内容。我们将经常重复它，以保持演示的流畅，所以请注意这个完全相同的文本字符串。</p>
+                    <blockquote>
+                        <p>更长的引用在这里，也许在中间有一些强调的文本。</p>
+                    </blockquote>
+                    <p>这是一些额外的段落占位符内容。它的编写是为了填充可用的空间，并显示较长的文本片段如何影响周围的内容。我们将经常重复它，以保持演示的流畅，所以请注意这个完全相同的文本字符串。</p>
+
+                    <h3>表</h3>
+                    <p>不要忘记这些文章中的表格：</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>名称</th>
+                                <th>赞成</th>
+                                <th>反对</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>刘备</td>
+                                <td>10</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>关羽</td>
+                                <td>4</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>张飞</td>
+                                <td>7</td>
+                                <td>9</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>总计</td>
+                                <td>21</td>
+                                <td>23</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <p>这是一些额外的段落占位符内容。它的编写是为了填充可用的空间，并显示较长的文本片段如何影响周围的内容。我们将经常重复它，以保持演示的流畅，所以请注意这个完全相同的文本字符串。</p>
+                </article>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title">新功能</h2>
+                    <p class="blog-post-meta">2020年12月23日 作者：<a href="#">任冠宇</a></p>
+
+                    <p>这是一些额外的段落占位符内容。它的编写是为了填充可用的空间，并显示较长的文本片段如何影响周围的内容。我们将经常重复它，以保持演示的流畅，所以请注意这个完全相同的文本字符串。</p>
+                    <ul>
+                        <li>元素1</li>
+                        <li>元素2</li>
+                        <li>元素3</li>
+                    </ul>
+                    <p>这是一些额外的段落占位符内容。它的编写是为了填充可用的空间，并显示较长的文本片段如何影响周围的内容。我们将经常重复它，以保持演示的流畅，所以请注意这个完全相同的文本字符串。</p>
+                </article>
+
+                <style>
+                    .blog-pagination {
+                        margin-bottom: 4rem;
+                    }
+
+                    .blog-pagination>.btn {
+                        border-radius: 2rem;
+                    }
+                </style>
+                <nav class="blog-pagination">
+                    <a class="btn btn-outline-primary" href="#">上一页</a>
+                    <a class="btn btn-outline-secondary disabled">下一页</a>
+                </nav>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="position-sticky" style="top: 2rem;">
+                    <div class="p-4 mb-3 bg-light rounded">
+                        <h4 class="fst-italic">关于我们</h4>
+                        <p class="mb-0">定制这部分内容，让访问者了解你的出版物、作者、内容或其他内容。完全由你决定。</p>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">档案</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li><a href="#">2021年3月</a></li>
+                            <li><a href="#">2021年2月</a></li>
+                            <li><a href="#">2021年1月</a></li>
+                            <li><a href="#">2020年12月</a></li>
+                            <li><a href="#">2020年11月</a></li>
+                            <li><a href="#">2020年10月</a></li>
+                            <li><a href="#">2020年9月</a></li>
+                            <li><a href="#">2020年8月</a></li>
+                            <li><a href="#">2020年7月</a></li>
+                            <li><a href="#">2020年6月</a></li>
+                            <li><a href="#">2020年5月</a></li>
+                            <li><a href="#">2020年4月</a></li>
+                        </ol>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="fst-italic">合作伙伴</h4>
+                        <ol class="list-unstyled">
+                            <li><a href="#">GitHub</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <style>
+        .blog-footer {
+            padding: 2.5rem 0;
+            color: #727272;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-top: .05rem solid #e5e5e5;
+        }
+
+        .blog-footer p:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+    <footer class="blog-footer">
+        <p>博客模板基于Bootstrap构建 作者：任冠宇</p>
+        <p>
+            <a href="#">回到顶部</a>
+        </p>
+    </footer>
+
+
+
+</body>
+
+</html>

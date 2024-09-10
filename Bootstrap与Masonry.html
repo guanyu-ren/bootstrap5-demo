@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap与Masonry</title>
+    <link rel="stylesheet" href="./libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <script src="./libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="./libs/masonry-layout/4.2.2/masonry.pkgd.min.js"></script>
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Masonry的简介</h1>
+        <p>Masonry是一个流式布局库，它可以将元素放置在网格中，以便它们在垂直和水平方向上对齐。Bootstrap是一个流行的前端框架，它提供了一组用于构建响应式和移动优先网站的CSS和JavaScript工具。Masonry与Bootstrap的集成可以让您更轻松地创建自适应布局，同时保持网站的外观和感觉。在您的代码中，您需要手动包含Masonry的JavaScript插件或使用CDN添加它，以便您可以使用它的功能。</p>
+    </div>
+
+    <main class="container py-5">
+        <h1>Bootstrap和Masonry</h1>
+        <p class="lead">将<a href="https://masonry.desandro.com/">Masonry</a>与Bootstrap网格系统和卡片组件集成。</p>
+
+        <p>Masonry未包含在Bootstrap中。通过手动包含JavaScript插件或使用CDN来添加它，如下所示：</p>
+
+        <pre>
+<code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js&quot; integrity=&quot;sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D&quot; crossorigin=&quot;anonymous&quot; async&gt;&lt;/script&gt;</code>
+        </pre>
+
+        <p>通过将<code>data-masonry='{"percentPosition": true }'</code>添加到<code>.row</code>包装器，我们可以结合Bootstrap的响应式网格和Masonry的定位功能。</p>
+
+        <hr class="my-5">
+
+        <div class="row" data-masonry='{"percentPosition": true }'>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>占位符</title>
+                        <rect width="100%" height="100%" fill="#868e96" />
+                        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">元素1-图片</text>
+                    </svg>
+
+                    <div class="card-body">
+                        <h5 class="card-title">元素1-标题</h5>
+                        <p class="card-text">元素1-内容</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card p-3">
+                    <figure class="p-3 mb-0">
+                        <blockquote class="blockquote">
+                            <p>元素2-文本引用</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-muted">
+                            RGY<cite title="Source Title">《XXX》</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>占位符</title>
+                        <rect width="100%" height="100%" fill="#868e96" />
+                        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">元素3-图片</text>
+                    </svg>
+
+                    <div class="card-body">
+                        <h5 class="card-title">元素3-标题</h5>
+                        <p class="card-text">元素3-内容</p>
+                        <p class="card-text"><small class="text-muted">元素3-时间</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card bg-primary text-white text-center p-3">
+                    <figure class="mb-0">
+                        <blockquote class="blockquote">
+                            <p>元素4-文本引用</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-white">
+                            RGY<cite title="Source Title">《XXX》</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">元素5-标题</h5>
+                        <p class="card-text">元素5-内容</p>
+                        <p class="card-text"><small class="text-muted">元素5-时间</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>占位符</title>
+                        <rect width="100%" height="100%" fill="#868e96" />
+                        <text x="50%" y="50%" fill="#dee2e6" dy=".3em">元素6-图片</text>
+                    </svg>
+
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card p-3 text-end">
+                    <figure class="mb-0">
+                        <blockquote class="blockquote">
+                            <p>元素7-文本引用</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-muted">
+                            RGY<cite title="Source Title">《XXX》</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">元素8-标题</h5>
+                        <p class="card-text">元素8-内容</p>
+                        <p class="card-text"><small class="text-muted">元素8-时间</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

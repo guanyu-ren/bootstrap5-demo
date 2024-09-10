@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bootstrap5Demo</title>
+	<link rel="stylesheet" href="./libs/bootstrap/5.3.0/css/bootstrap.css">
+	<script src="./libs/bootstrap/5.3.0/js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="mt-5">Bootstrap5Demo</h1>
+		<hr>
+
+		<h2>手风琴</h2>
+		<div class="accordion" id="accordion1">
+			<div class="accordion-item">
+				<h4 class="accordion-header" id="header1">
+					<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+						item1
+					</button>
+				</h4>
+				<div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="header1" data-bs-parent="#accordion1">
+					<div class="accordion-body">
+						item1 text
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h4 class="accordion-header" id="header2">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+						item2
+					</button>
+				</h4>
+				<div id="collapse2" class="accordion-collapse collapse" aria-labelledby="header2" data-bs-parent="#accordion1">
+					<div class="accordion-body">
+						item2 text
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h4 class="accordion-header" id="header3">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+						item3
+					</button>
+				</h4>
+				<div id="collapse3" class="accordion-collapse collapse" aria-labelledby="header3" data-bs-parent="#accordion1">
+					<div class="accordion-body">
+						item3 text
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+
+		<h2>提示信息</h2>
+		<div class="alert alert-primary alert-dismissible fade show">
+			主提示 <a href="#" class="alert-link">示例链接</a>
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		<div class="alert alert-secondary alert-dismissible fade show">
+			次提示 <a href="#" class="alert-link">示例链接</a>
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		<div class="alert alert-success alert-dismissible fade show">
+			成功提示 <a href="#" class="alert-link">示例链接</a>
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		<div class="alert alert-danger alert-dismissible fade show">
+			危险提示 <a href="#" class="alert-link">示例链接</a>
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		<div class="alert alert-warning alert-dismissible fade show">
+			警告提示 <a href="#" class="alert-link">示例链接</a>
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		<div class="alert alert-info alert-dismissible fade show">
+			信息提示 <a href="#" class="alert-link">示例链接</a>
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		<div class="alert alert-light alert-dismissible fade show">
+			浅色提示 <a href="#" class="alert-link">示例链接</a>
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		<div class="alert alert-dark alert-dismissible fade show">
+			暗色提示 <a href="#" class="alert-link">示例链接</a>
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		<div class="alert alert-success">
+			<h4 class="alert-heading">可以向提示信息中放标签，h4标签</h4>
+			<p>p标签</p>
+			<hr>
+			<p class="mb-0">hr标签和p标签</p>
+		</div>
+		<hr>
+
+		<h2>徽标</h2>
+		<h3>普通的徽标</h3>
+		<span class="badge bg-primary">主</span>
+		<span class="badge bg-secondary">次</span>
+		<span class="badge bg-success">成功</span>
+		<span class="badge bg-danger">危险</span>
+		<span class="badge bg-warning text-dark">警告</span>
+		<span class="badge bg-info text-dark">信息</span>
+		<span class="badge bg-light text-dark">明亮</span>
+		<span class="badge bg-dark">黑暗</span>
+		<h3>椭圆形徽标</h3>
+		<span class="badge rounded-pill bg-primary">主</span>
+		<span class="badge rounded-pill bg-secondary">次</span>
+		<span class="badge rounded-pill bg-success">成功</span>
+		<span class="badge rounded-pill bg-danger">危险</span>
+		<span class="badge rounded-pill bg-warning text-dark">警告</span>
+		<span class="badge rounded-pill bg-info text-dark">信息</span>
+		<span class="badge rounded-pill bg-light text-dark">明亮</span>
+		<span class="badge rounded-pill bg-dark">黑暗</span>
+
+		<hr>
+
+		<h2>面包屑导航</h2>
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="#">主页</a></li>
+				<li class="breadcrumb-item"><a href="#">设置</a></li>
+				<li class="breadcrumb-item active" aria-current="page">用户设置</li>
+			</ol>
+		</nav>
+		<hr>
+
+		<h2>按钮</h2>
+		<h3>默认有背景色</h3>
+		<button type="button" class="btn btn-primary">Primary</button>
+		<button type="button" class="btn btn-secondary">Secondary</button>
+		<button type="button" class="btn btn-success">Success</button>
+		<button type="button" class="btn btn-danger">Danger</button>
+		<button type="button" class="btn btn-warning">Warning</button>
+		<button type="button" class="btn btn-info">Info</button>
+		<button type="button" class="btn btn-light">Light</button>
+		<button type="button" class="btn btn-dark">Dark</button>
+		<button type="button" class="btn btn-link">Link</button>
+		<br><br>
+		<h3>默认无背景色</h3>
+		<button type="button" class="btn btn-outline-primary">Primary</button>
+		<button type="button" class="btn btn-outline-secondary">Secondary</button>
+		<button type="button" class="btn btn-outline-success">Success</button>
+		<button type="button" class="btn btn-outline-danger">Danger</button>
+		<button type="button" class="btn btn-outline-warning">Warning</button>
+		<button type="button" class="btn btn-outline-info">Info</button>
+		<button type="button" class="btn btn-outline-light">Light</button>
+		<button type="button" class="btn btn-outline-dark">Dark</button>
+		<br><br>
+		<h3>调整按钮大小</h3>
+		<button type="button" class="btn btn-primary btn-sm">小按钮</button>
+		<button type="button" class="btn btn-primary">标准按钮</button>
+		<button type="button" class="btn btn-primary btn-lg">大按钮</button>
+		<hr>
+
+		<h2>按钮组</h2>
+		<div class="btn-group" role="group" aria-label="group1">
+			<button type="button" class="btn btn-secondary">1</button>
+			<button type="button" class="btn btn-secondary">2</button>
+			<button type="button" class="btn btn-secondary">3</button>
+			<button type="button" class="btn btn-secondary">4</button>
+		</div>
+		<hr>
+
+		<h2>卡片</h2>
+		<h3>卡片1</h3>
+		<div class="card">
+			<svg class="bd-placeholder-img card-img-top" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+				<title>占位图片</title>
+				<rect width="100%" height="100%" fill="#868e96" />
+				<text x="50%" y="50%" fill="#dee2e6" dy=".3em">图片</text>
+			</svg>
+
+			<div class="card-body">
+				<h5 class="card-title">标题</h5>
+				<p class="card-text">文本</p>
+				<a href="#" class="btn btn-primary">链接</a>
+			</div>
+		</div>
+		<br>
+
+		<h3>卡片2</h3>
+		<div class="card">
+			<div class="card-header">卡片头</div>
+			<div class="card-body">
+				<h5 class="card-title">卡片体-标题</h5>
+				<p class="card-text">卡片体-文本</p>
+				<a href="#" class="btn btn-primary">卡片体-链接</a>
+			</div>
+			<div class="card-footer text-muted">卡片脚</div>
+		</div>
+		<br>
+
+		<h3>卡片3</h3>
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">卡片体-标题</h5>
+				<p class="card-text">卡片体-文本</p>
+			</div>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">列表-元素1</li>
+				<li class="list-group-item">列表-元素2</li>
+				<li class="list-group-item">列表-元素3</li>
+			</ul>
+			<div class="card-body">
+				<a href="#" class="card-link">卡片体-链接1</a>
+				<a href="#" class="card-link">卡片体-链接2</a>
+			</div>
+		</div>
+		<br>
+
+		<h3>卡片4</h3>
+		<h4>通过行列控制卡片布局</h4>
+		<div class="card">
+			<div class="row g-0">
+				<div class="col-md-4">
+					<svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+						<title>占位图片</title>
+						<rect width="100%" height="100%" fill="#868e96" />
+						<text x="50%" y="50%" fill="#dee2e6" dy=".3em">图片</text>
+					</svg>
+				</div>
+				<div class="col-md-8">
+					<div class="card-body">
+						<h5 class="card-title">卡片标题</h5>
+						<p class="card-text">卡片文本1</p>
+						<p class="card-text"><small class="text-muted">卡片文本2</small></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+
+		<h2>轮播图</h2>
+		<div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true"></button>
+				<button type="button" data-bs-target="#carousel1" data-bs-slide-to="1"></button>
+				<button type="button" data-bs-target="#carousel1" data-bs-slide-to="2"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+						<title>幻灯片1-图片-提示信息</title>
+						<rect width="100%" height="100%" fill="#777" />
+						<text x="50%" y="50%" fill="#555" dy=".3em">幻灯片1-图片-背景文字</text>
+					</svg>
+					<div class="carousel-caption d-none d-md-block">
+						<h5>幻灯片1-标题</h5>
+						<p>幻灯片1-文本</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+						<title>幻灯片2-图片-提示信息</title>
+						<rect width="100%" height="100%" fill="#666" />
+						<text x="50%" y="50%" fill="#444" dy=".3em">幻灯片2-图片-背景文字</text>
+					</svg>
+					<div class="carousel-caption d-none d-md-block">
+						<h5>幻灯片2-标题</h5>
+						<p>幻灯片2-文本</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+						<title>幻灯片3-图片-提示信息</title>
+						<rect width="100%" height="100%" fill="#555" />
+						<text x="50%" y="50%" fill="#333" dy=".3em">幻灯片3-图片-背景文字</text>
+					</svg>
+					<div class="carousel-caption d-none d-md-block">
+						<h5>幻灯片3-标题</h5>
+						<p>幻灯片3-文本</p>
+					</div>
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</button>
+		</div>
+		<hr>
+
+		<h2>下拉框</h2>
+		<h3>不同大小的按钮下拉框，默认下拉框实现</h3>
+		<div class="dropdown">
+			<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdown1" data-bs-toggle="dropdown" aria-expanded="false">
+				下拉框-按钮-小型
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="dropdown1">
+				<li>
+					<h6 class="dropdown-header">下拉框-头</h6>
+				</li>
+				<li><a class="dropdown-item" href="#">下拉框-元素1</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素2</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素3</a></li>
+				<li>
+					<hr class="dropdown-divider">
+				</li>
+				<li><a class="dropdown-item" href="#">下拉框-元素4</a></li>
+			</ul>
+		</div>
+		<br>
+
+		<div class="dropdown">
+			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdown2" data-bs-toggle="dropdown" aria-expanded="false">
+				下拉框-按钮-默认
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="dropdown2">
+				<li>
+					<h6 class="dropdown-header">下拉框-头</h6>
+				</li>
+				<li><a class="dropdown-item" href="#">下拉框-元素1</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素2</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素3</a></li>
+				<li>
+					<hr class="dropdown-divider">
+				</li>
+				<li><a class="dropdown-item" href="#">下拉框-元素4</a></li>
+			</ul>
+		</div>
+		<br>
+
+		<div class="dropdown">
+			<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdown3" data-bs-toggle="dropdown" aria-expanded="false">
+				下拉框-按钮-大号
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="dropdown3">
+				<li>
+					<h6 class="dropdown-header">下拉框-头</h6>
+				</li>
+				<li><a class="dropdown-item" href="#">下拉框-元素1</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素2</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素3</a></li>
+				<li>
+					<hr class="dropdown-divider">
+				</li>
+				<li><a class="dropdown-item" href="#">下拉框-元素4</a></li>
+			</ul>
+		</div>
+		<br>
+
+		<h3>不同颜色的按钮下拉框，基于按钮组实现</h3>
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary">主按钮</button>
+			<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"></button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">下拉框-元素1</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素2</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素3</a></li>
+			</ul>
+		</div>
+
+		<div class="btn-group">
+			<button type="button" class="btn btn-secondary">次按钮</button>
+			<button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"></button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">下拉框-元素1</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素2</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素3</a></li>
+			</ul>
+		</div>
+
+		<div class="btn-group">
+			<button type="button" class="btn btn-success">成功按钮</button>
+			<button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"></button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">下拉框-元素1</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素2</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素3</a></li>
+			</ul>
+		</div>
+
+		<div class="btn-group">
+			<button type="button" class="btn btn-info">信息按钮</button>
+			<button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">下拉框-元素1</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素2</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素3</a></li>
+			</ul>
+		</div>
+
+		<div class="btn-group">
+			<button type="button" class="btn btn-warning">警告按钮</button>
+			<button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">下拉框-元素1</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素2</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素3</a></li>
+			</ul>
+		</div>
+
+		<div class="btn-group">
+			<button type="button" class="btn btn-danger">危险按钮</button>
+			<button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">下拉框-元素1</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素2</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素3</a></li>
+			</ul>
+		</div>
+		<br><br>
+
+		<h3>下拉菜单弹到不同的位置</h3>
+		<div class="dropend">
+			<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				弹到右侧
+			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<h6 class="dropdown-header">下拉框-头</h6>
+				</li>
+				<li><a class="dropdown-item" href="#">下拉框-元素1</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素2</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素3</a></li>
+				<li>
+					<hr class="dropdown-divider">
+				</li>
+				<li><a class="dropdown-item" href="#">下拉框-元素4</a></li>
+			</ul>
+		</div>
+		<br>
+
+		<div class="dropstart">
+			<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				弹到左侧
+			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<h6 class="dropdown-header">下拉框-头</h6>
+				</li>
+				<li><a class="dropdown-item" href="#">下拉框-元素1</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素2</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素3</a></li>
+				<li>
+					<hr class="dropdown-divider">
+				</li>
+				<li><a class="dropdown-item" href="#">下拉框-元素4</a></li>
+			</ul>
+		</div>
+		<br>
+
+		<div class="dropup">
+			<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				弹到上侧
+			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<h6 class="dropdown-header">下拉框-头</h6>
+				</li>
+				<li><a class="dropdown-item" href="#">下拉框-元素1</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素2</a></li>
+				<li><a class="dropdown-item" href="#">下拉框-元素3</a></li>
+				<li>
+					<hr class="dropdown-divider">
+				</li>
+				<li><a class="dropdown-item" href="#">下拉框-元素4</a></li>
+			</ul>
+		</div>
+		<br>
+
+		<div class="dropdown">
+			<button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				右对齐菜单
+			</button>
+			<ul class="dropdown-menu dropdown-menu-end">
+				<li>
+					<h6 class="dropdown-header">元素1</h6>
+				</li>
+				<li><a class="dropdown-item" href="#">元素2</a></li>
+				<li><a class="dropdown-item" href="#">元素3</a></li>
+				<li>
+					<hr class="dropdown-divider">
+				</li>
+				<li><a class="dropdown-item" href="#">元素4</a></li>
+			</ul>
+		</div>
+		<br>
+		<hr>
+
+		<h2>列表组</h2>
+		<h3>有边框的</h3>
+		<ul class="list-group">
+			<li class="list-group-item disabled" aria-disabled="true">元素1-禁用状态</li>
+			<li class="list-group-item">元素2</li>
+			<li class="list-group-item">元素3</li>
+			<li class="list-group-item">元素4</li>
+			<li class="list-group-item">元素5</li>
+		</ul>
+		<br>
+		<h3>无边框的</h3>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item disabled" aria-disabled="true">元素1-禁用状态</li>
+			<li class="list-group-item">元素2</li>
+			<li class="list-group-item">元素3</li>
+			<li class="list-group-item">元素4</li>
+			<li class="list-group-item">元素5</li>
+		</ul>
+		<br>
+		<h3>五颜六色的</h3>
+		<div class="list-group">
+			<a href="#" class="list-group-item list-group-item-action">元素-默认</a>
+			<a href="#" class="list-group-item list-group-item-action list-group-item-primary">元素-主要</a>
+			<a href="#" class="list-group-item list-group-item-action list-group-item-secondary">元素-次要</a>
+			<a href="#" class="list-group-item list-group-item-action list-group-item-success">元素-成功</a>
+			<a href="#" class="list-group-item list-group-item-action list-group-item-danger">元素-危险</a>
+			<a href="#" class="list-group-item list-group-item-action list-group-item-warning">元素-警告</a>
+			<a href="#" class="list-group-item list-group-item-action list-group-item-info">元素-信息</a>
+			<a href="#" class="list-group-item list-group-item-action list-group-item-light">元素-明亮</a>
+			<a href="#" class="list-group-item list-group-item-action list-group-item-dark">元素-暗黑</a>
+		</div>
+
+		<hr>
+
+		<h2>弹窗</h2>
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">运行弹窗</button>
+		<div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">弹窗-标题</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">弹窗-体部</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">运行静态内容的弹窗</button>
+		<div class="modal fade" id="modal2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">弹窗-标题</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>弹窗-体部-内容</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">垂直的居中的可滚动的弹窗</button>
+		<div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">弹窗-标题</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<p>弹窗-体部-内容1</p>
+						<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+						<p>弹窗-体部-内容2</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+						<button type="button" class="btn btn-primary">保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">全屏弹窗</button>
+		<div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-fullscreen">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title h4">弹窗-标题</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">弹窗-体部-内容</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+
+		<h2>选项卡</h2>
+		<h3>无边框无内容的选项卡</h3>
+		<nav class="nav">
+			<a class="nav-link active" aria-current="page" href="#">元素1-激活状态</a>
+			<a class="nav-link" href="#">元素2</a>
+			<a class="nav-link" href="#">元素3</a>
+			<a class="nav-link disabled">元素4-禁用状态</a>
+		</nav>
+
+		<br>
+
+		<h3>有边框有内容的选项卡</h3>
+		<nav>
+			<div class="nav nav-tabs mb-3" id="nav-tab">
+				<button class="nav-link active" data-bs-toggle="tab" data-bs-target="#nav-item1">页面1</button>
+				<button class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-item2">页面2</button>
+				<button class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-item3">页面3</button>
+			</div>
+		</nav>
+		<div class="tab-content">
+			<div class="tab-pane fade show active" id="nav-item1">
+				<p>页面1-内容</p>
+			</div>
+			<div class="tab-pane fade" id="nav-item2">
+				<p>页面2-内容</p>
+			</div>
+			<div class="tab-pane fade" id="nav-item3">
+				<p>页面3-内容</p>
+			</div>
+		</div>
+
+		<br>
+
+		<h3>背景色选中状态的选项卡</h3>
+		<ul class="nav nav-pills">
+			<li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="#">元素1-激活状态</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">元素2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">元素3</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled">元素4-禁用状态</a>
+			</li>
+		</ul>
+
+		<hr>
+
+		<h2>工具栏</h2>
+		<h3>浅色工具栏</h3>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img src="./img/bootstrap-logo-white.svg" width="38" height="30" class="d-inline-block align-top" alt="Bootstrap" loading="lazy" style="filter: invert(1);">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1" aria-expanded="false">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbar1">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#">页面1</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">页面2</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbar1-dropdown1" data-bs-toggle="dropdown" aria-expanded="false">页面3</a>
+							<ul class="dropdown-menu" aria-labelledby="navbar1-dropdown1">
+								<li><a class="dropdown-item" href="#">页面3-元素1</a></li>
+								<li><a class="dropdown-item" href="#">页面3-元素2</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="#">页面3-元素3</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled">页面4</a>
+						</li>
+					</ul>
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="占位文本">
+						<button class="btn btn-outline-dark" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<br>
+		<h3>蓝色工具栏</h3>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img src="./img/bootstrap-logo-white.svg" width="38" height="30" class="d-inline-block align-top" alt="Bootstrap" loading="lazy">
+				</a>
+				<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar2Content1" aria-expanded="false">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbar2Content1">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#">页面1</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">页面2</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" data-bs-toggle="dropdown" aria-expanded="false">页面3</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+								<li><a class="dropdown-item" href="#">页面3-元素1</a></li>
+								<li><a class="dropdown-item" href="#">页面3-元素2</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item" href="#">页面3-元素3</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled">页面4</a>
+						</li>
+					</ul>
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="占位文本" aria-label="Search">
+						<button class="btn btn-outline-light" type="submit">Search</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+
+		<hr>
+
+		<h2>分页</h2>
+		<h3>小型分页</h3>
+		<ul class="pagination pagination-sm">
+			<li class="page-item">
+				<a class="page-link" href="#">1</a>
+			</li>
+			<li class="page-item active" aria-current="page">
+				<a class="page-link" href="#">2</a>
+			</li>
+			<li class="page-item">
+				<a class="page-link" href="#">3</a>
+			</li>
+		</ul>
+
+		<h3>中型分页</h3>
+		<nav>
+			<ul class="pagination">
+				<li class="page-item">
+					<a class="page-link" href="#">
+						<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">1</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">2</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">3</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">
+						<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<h3>大型分页</h3>
+		<nav>
+			<ul class="pagination pagination-lg flex-wrap">
+				<li class="page-item disabled">
+					<a class="page-link">Previous</a>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">1</a></li>
+				<li class="page-item active" aria-current="page">
+					<a class="page-link" href="#">2</a>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item">
+					<a class="page-link" href="#">Next</a>
+				</li>
+			</ul>
+		</nav>
+
+		<hr>
+
+		<h2>鼠标点击提示信息</h2>
+		<button class="btn btn-lg btn-danger" data-bs-toggle="popover" title="标题" data-bs-content="内容">点击提示信息</button>
+		<button class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="内容">在上方提示</button>
+		<button class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="内容">在下方提示</button>
+		<button class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="内容">在左方提示</button>
+		<button class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="内容">在右方提示</button>
+		<script>
+			document.querySelectorAll('[data-bs-toggle="popover"]').forEach(function (popover) {
+				new bootstrap.Popover(popover)
+			})
+		</script>
+
+		<hr>
+
+		<h2>进度条</h2>
+		<div class="progress">
+			<div class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+		</div>
+		<br>
+		<div class="progress">
+			<div class="progress-bar bg-success w-25" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+		</div>
+		<br>
+		<div class="progress">
+			<div class="progress-bar bg-info text-dark w-50" raria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+		</div>
+		<br>
+		<div class="progress">
+			<div class="progress-bar bg-warning text-dark w-75" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+		</div>
+		<br>
+		<div class="progress">
+			<div class="progress-bar bg-danger w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%</div>
+		</div>
+		<br>
+		<div class="progress">
+			<div class="progress-bar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+			<div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+		</div>
+		<hr>
+
+		<h2>内容的标题与导航栏的元素进行联动</h2>
+		<nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+			<a class="navbar-brand" href="#">导航栏</a>
+			<ul class="nav nav-pills">
+				<li class="nav-item">
+					<a class="nav-link active" href="#moveTitle1">页面1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#moveTitle2">页面2</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" aria-expanded="false">页面3</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#moveTitle3">页面3-元素1</a></li>
+						<li><a class="dropdown-item" href="#moveTitle4">页面3-元素2</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li><a class="dropdown-item" href="#moveTitle5">页面3-元素3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" style="position:relative;height:200px;margin-top:0.5rem;overflow:auto;">
+			<h4 id="moveTitle1">元素1-标题</h4>
+			<p>元素1-内容</p>
+			<h4 id="moveTitle2">元素2-标题</h4>
+			<p>元素2-内容</p>
+			<h4 id="moveTitle3">元素3-标题</h4>
+			<p>元素3-内容</p>
+			<h4 id="moveTitle4">元素4-标题</h4>
+			<p>元素4-内容</p>
+			<h4 id="moveTitle5">元素5-标题</h4>
+			<p>元素5-内容</p>
+		</div>
+
+		<hr>
+
+		<h2>加载中</h2>
+		<h3>转圈</h3>
+		<div class="spinner-border text-primary"></div>
+		<div class="spinner-border text-secondary"></div>
+		<div class="spinner-border text-success"></div>
+		<div class="spinner-border text-danger"></div>
+		<div class="spinner-border text-warning"></div>
+		<div class="spinner-border text-info"></div>
+		<div class="spinner-border text-light"></div>
+		<div class="spinner-border text-dark"></div>
+		<h3>闪烁</h3>
+		<div class="spinner-grow text-primary"></div>
+		<div class="spinner-grow text-secondary"></div>
+		<div class="spinner-grow text-success"></div>
+		<div class="spinner-grow text-danger"></div>
+		<div class="spinner-grow text-warning"></div>
+		<div class="spinner-grow text-info"></div>
+		<div class="spinner-grow text-light"></div>
+		<div class="spinner-grow text-dark"></div>
+
+		<hr>
+		<h2>小提示框</h2>
+		<div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+			<div class="toast-header">
+				<svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+					<rect width="100%" height="100%" fill="#007aff" />
+				</svg>
+				<strong class="me-auto">标题</strong>
+				<small class="text-muted">11分钟前</small>
+				<button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+			</div>
+			<div class="toast-body">
+				你好，世界！
+			</div>
+		</div>
+		<script>
+			document.querySelectorAll('.toast').forEach(function (toastNode) {
+				var toast = new bootstrap.Toast(toastNode, {
+					autohide: false
+				})
+				toast.show()
+			})
+
+		</script>
+		<hr>
+
+		<h2>鼠标移动到目标上进行信息提示</h2>
+		<button class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="标题">提示信息在上</button>
+		<button class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="标题">提示信息在下</button>
+		<button class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="标题">提示信息在坐左</button>
+		<button class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="标题">提示信息在右</button>
+		<button class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">提示信息包含HTML</button>
+		<script>
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+				return new bootstrap.Tooltip(tooltipTriggerEl)
+			})
+		</script>
+
+		<hr>
+
+		<h2>表单元素</h2>
+		<form>
+			<div class="mb-3">
+				<label for="inputEmail1" class="form-label">表单-标签，点击标签可选中下方输入框</label>
+				<input type="email" class="form-control" id="inputEmail1">
+				<div class="form-text">表单-文本</div>
+			</div>
+			<div class="mb-3">
+				<label for="inputPassword1" class="form-label">密码</label>
+				<input type="password" class="form-control" id="inputPassword1">
+			</div>
+			<div class="mb-3 form-check">
+				<input type="checkbox" class="form-check-input" id="exampleCheck1">
+				<label class="form-check-label" for="exampleCheck1">勾选框</label>
+			</div>
+			<fieldset class="mb-3">
+				<legend>属性集-标题</legend>
+				<div class="form-check">
+					<input type="radio" name="radios" class="form-check-input" id="radio1">
+					<label class="form-check-label" for="radio1">单选1</label>
+				</div>
+				<div class="mb-3 form-check">
+					<input type="radio" name="radios" class="form-check-input" id="radio2">
+					<label class="form-check-label" for="radio2">单选2</label>
+				</div>
+			</fieldset>
+			<div class="mb-3">
+				<label class="form-label" for="customFile">上传</label>
+				<input type="file" class="form-control" id="customFile">
+			</div>
+			<div class="mb-3 form-check form-switch">
+				<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+				<label class="form-check-label" for="flexSwitchCheckChecked">开关</label>
+			</div>
+			<div class="mb-3">
+				<label for="customRange3" class="form-label">滑动选择器</label>
+				<input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+			</div>
+			<button type="submit" class="btn btn-primary">按钮</button>
+		</form>
+
+		<hr>
+
+		<h2>表单元素-禁用状态</h2>
+		<form>
+			<fieldset disabled>
+				<div class="mb-3">
+					<label for="disabledTextInput" class="form-label">文本输入</label>
+					<input type="text" id="disabledTextInput" class="form-control" placeholder="已被禁用">
+				</div>
+				<div class="mb-3">
+					<label for="disabledSelect" class="form-label">下拉菜单</label>
+					<select id="disabledSelect" class="form-select">
+						<option>已被禁用</option>
+					</select>
+				</div>
+				<div class="mb-3">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+						<label class="form-check-label" for="disabledFieldsetCheck">
+							已被禁用
+						</label>
+					</div>
+				</div>
+				<fieldset class="mb-3">
+					<legend>单选按钮</legend>
+					<div class="form-check">
+						<input type="radio" name="radios" class="form-check-input" id="disabledRadio1" disabled>
+						<label class="form-check-label" for="disabledRadio1">选项1</label>
+					</div>
+					<div class="mb-3 form-check">
+						<input type="radio" name="radios" class="form-check-input" id="disabledRadio2" disabled>
+						<label class="form-check-label" for="disabledRadio2">选项2</label>
+					</div>
+				</fieldset>
+				<div class="mb-3">
+					<label class="form-label" for="disabledCustomFile">上传</label>
+					<input type="file" class="form-control" id="disabledCustomFile" disabled>
+				</div>
+				<div class="mb-3 form-check form-switch">
+					<input class="form-check-input" type="checkbox" role="switch" id="disabledSwitchCheckChecked" checked disabled>
+					<label class="form-check-label" for="disabledSwitchCheckChecked">已被禁用</label>
+				</div>
+				<div class="mb-3">
+					<label for="disabledRange" class="form-label">范围选择</label>
+					<input type="range" class="form-range" min="0" max="5" step="0.5" id="disabledRange">
+				</div>
+				<button type="submit" class="btn btn-primary">按钮</button>
+			</fieldset>
+		</form>
+		<hr>
+
+		<h2>大小</h2>
+		<h3>lg 大组件</h3>
+		<div class="bd-example">
+			<div class="mb-3">
+				<input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
+			</div>
+			<div class="mb-3">
+				<select class="form-select form-select-lg mb-3">
+					<option selected>选项1</option>
+					<option value="1">选项2</option>
+					<option value="2">选项3</option>
+				</select>
+			</div>
+			<div class="mb-3">
+				<input type="file" class="form-control form-control-lg">
+			</div>
+		</div>
+
+		<h3>sm 小组件</h3>
+		<div class="mb-3">
+			<input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+		</div>
+		<div class="mb-3">
+			<select class="form-select form-select-sm" aria-label=".form-select-sm example">
+				<option selected>选项1</option>
+				<option value="1">选项2</option>
+				<option value="2">选项3</option>
+			</select>
+		</div>
+		<div class="mb-3">
+			<input type="file" class="form-control form-control-sm">
+		</div>
+
+
+		<h2>复合型输入框</h2>
+		<div class="input-group mb-3">
+			<span class="input-group-text" id="basic-addon1">@</span>
+			<input type="text" class="form-control" placeholder="用户名">
+		</div>
+
+		<div class="input-group mb-3">
+			<input type="text" class="form-control" placeholder="用户名">
+			<span class="input-group-text" id="basic-addon2">@qq.com</span>
+		</div>
+
+		<label for="basic-url" class="form-label">你的地址</label>
+		<div class="input-group mb-3">
+			<span class="input-group-text" id="basic-addon3">https://qq.com/users/</span>
+			<input type="text" class="form-control" id="basic-url">
+		</div>
+
+		<div class="input-group mb-3">
+			<span class="input-group-text">$</span>
+			<input type="text" class="form-control">
+			<span class="input-group-text">.00</span>
+		</div>
+
+		<div class="input-group">
+			<span class="input-group-text">大文本框</span>
+			<textarea class="form-control"></textarea>
+		</div>
+
+		<hr>
+
+		<h2>带动画的输入框</h2>
+		<div class="form-floating mb-3">
+			<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+			<label for="floatingInput">邮箱地址</label>
+		</div>
+		<div class="form-floating">
+			<input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+			<label for="floatingPassword">密码</label>
+		</div>
+
+		<hr>
+
+		<h2>验证</h2>
+		<form class="row g-3">
+			<div class="col-md-4">
+				<label for="validationServer01" class="form-label">姓</label>
+				<input type="text" class="form-control is-valid" id="validationServer01" value="任" required>
+				<div class="valid-feedback">验证通过</div>
+			</div>
+			<div class="col-md-4">
+				<label for="validationServer02" class="form-label">名</label>
+				<input type="text" class="form-control is-valid" id="validationServer02" value="冠宇" required>
+				<div class="valid-feedback">验证通过</div>
+			</div>
+			<div class="col-md-4">
+				<label for="validationServerUsername" class="form-label">账号</label>
+				<div class="input-group has-validation">
+					<span class="input-group-text" id="inputGroupPrepend3">@</span>
+					<input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3" required>
+					<div class="invalid-feedback">请输入有效的账号</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<label for="validationServer03" class="form-label">城市</label>
+				<input type="text" class="form-control is-invalid" id="validationServer03" required>
+				<div class="invalid-feedback">请输入有效的城市</div>
+			</div>
+			<div class="col-md-3">
+				<label for="validationServer04" class="form-label">状态</label>
+				<select class="form-select is-invalid" id="validationServer04" required>
+					<option selected disabled value="">选项1</option>
+					<option>选项2</option>
+				</select>
+				<div class="invalid-feedback">请输入有效的状态</div>
+			</div>
+			<div class="col-md-3">
+				<label for="validationServer05" class="form-label">格式</label>
+				<input type="text" class="form-control is-invalid" id="validationServer05" required>
+				<div class="invalid-feedback">请输入有效的格式</div>
+			</div>
+			<div class="col-12">
+				<div class="form-check">
+					<input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
+					<label class="form-check-label" for="invalidCheck3">我同意条款的全部内容</label>
+					<div class="invalid-feedback">请勾选上方的条款内容</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<button class="btn btn-primary" type="submit">提交</button>
+			</div>
+		</form>
+
+		<hr>
+
+		<h2>排版</h2>
+		<p class="display-1">显示1</p>
+		<p class="display-2">显示2</p>
+		<p class="display-3">显示3</p>
+		<p class="display-4">显示4</p>
+		<p class="display-5">显示5</p>
+		<p class="display-6">显示6</p>
+
+		<p class="h1">标题1</p>
+		<p class="h2">标题2</p>
+		<p class="h3">标题3</p>
+		<p class="h4">标题4</p>
+		<p class="h5">标题5</p>
+		<p class="h6">标题6</p>
+
+		<p class="lead">导语段落</p>
+
+		<p><mark>高亮的文本</mark></p>
+		<p><del>删除文本</del></p>
+		<p><s>删除文本，简写标签</s></p>
+		<p><ins>下划线文本</ins></p>
+		<p><u>下划线文本，简写标签</u></p>
+		<p><small>小号字体的文本</small></p>
+		<p><strong>加粗字体的文本</strong></p>
+		<p><em>倾斜字体的文本</em></p>
+
+		<blockquote class="blockquote">
+			<p>引用的内容</p>
+			<footer class="blockquote-footer">引用的出处 <cite title="Source Title">《书名》</cite></footer>
+		</blockquote>
+
+		<ul class="list-unstyled">
+			<li>元素1</li>
+			<li>元素2
+				<ul>
+					<li>元素2-1</li>
+					<li>元素2-2</li>
+					<li>元素2-3</li>
+				</ul>
+			</li>
+			<li>元素3</li>
+		</ul>
+
+		<ul class="list-inline">
+			<li class="list-inline-item">元素1</li>
+			<li class="list-inline-item">元素2</li>
+			<li class="list-inline-item">元素3</li>
+		</ul>
+
+		<hr>
+
+		<h2>图片</h2>
+		<svg class="bd-placeholder-img bd-placeholder-img-lg img-fluid" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" style="text-anchor: middle;">
+			<title>图片描述文本</title>
+			<rect width="100%" height="100%" fill="#868e96" />
+			<text x="50%" y="50%" fill="#dee2e6" dy=".3em">可自动缩放的图片</text>
+		</svg>
+
+		<svg class="bd-placeholder-img img-thumbnail" width="200" height="200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" style="text-anchor: middle;">
+			<title>图片描述文本</title>
+			<rect width="100%" height="100%" fill="#868e96" />
+			<text x="50%" y="50%" fill="#dee2e6" dy=".3em">200x200，固定宽高</text>
+		</svg>
+
+		<hr>
+
+		<h2>表格</h2>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th scope="col">斑马纹</th>
+					<th scope="col">表头1</th>
+					<th scope="col">表头2</th>
+					<th scope="col">表头3</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>数据</td>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>数据</td>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td colspan="2">合并2列</td>
+					<td>数据</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table class="table table-dark table-borderless">
+			<thead>
+				<tr>
+					<th scope="col">黑色背景</th>
+					<th scope="col">表头1</th>
+					<th scope="col">表头2</th>
+					<th scope="col">表头3</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>数据</td>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>数据</td>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td colspan="2">合并2列</td>
+					<td>数据</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th scope="col">五颜六色的可悬停变色的表格</th>
+					<th scope="col">表头1</th>
+					<th scope="col">表头2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">默认</th>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+
+				<tr class="table-primary">
+					<th scope="row">主</th>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+				<tr class="table-secondary">
+					<th scope="row">次</th>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+				<tr class="table-success">
+					<th scope="row">成功</th>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+				<tr class="table-danger">
+					<th scope="row">危险</th>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+				<tr class="table-warning">
+					<th scope="row">警告</th>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+				<tr class="table-info">
+					<th scope="row">信息</th>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+				<tr class="table-light">
+					<th scope="row">明亮的</th>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+				<tr class="table-dark">
+					<th scope="row">暗黑的</th>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<table class="table table-sm table-bordered">
+			<thead>
+				<tr>
+					<th scope="col">小型的带边框的表格</th>
+					<th scope="col">表头1</th>
+					<th scope="col">表头2</th>
+					<th scope="col">表头3</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>数据</td>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>数据</td>
+					<td>数据</td>
+					<td>数据</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td colspan="2">合并2列</td>
+					<td>数据</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<hr>
+
+		<h2>具有关联关系的图片和文本</h2>
+		<figure class="figure">
+			<svg class="bd-placeholder-img figure-img img-fluid rounded" width="400" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" style="text-anchor: middle;">
+				<title>占位文本</title>
+				<rect width="100%" height="100%" fill="#868e96" />
+				<text x="50%" y="50%" fill="#dee2e6" dy=".3em">400x300</text>
+			</svg>
+			<figcaption class="figure-caption">上方图片的描述性文字</figcaption>
+		</figure>
+
+		<hr>
+
+		<div style="margin-top: 500px;"></div>
+	</div>
+</body>
+
+</html>
